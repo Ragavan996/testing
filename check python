@@ -1,0 +1,5 @@
+# to sun of the series 
+a=int(input("ENTER THE NUMBER :"))
+b=int(input("ENTER THE NUMBER :"))
+c=a+b
+print(c)
