@@ -1,0 +1,6 @@
+# FACTORIAL CALCULATION
+num=int(input("ENTER THE NUMBER : "))
+fact=1
+for i in range5(1,num+1):
+    fact=fact*i
+print("FACTORIAL OF ",num,"is",fact
