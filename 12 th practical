@@ -1,0 +1,118 @@
+"""
+#to calculate the factorial
+num=int(input("ENTER THE NUMBER :"))
+fact=1
+for i in range(1,num+1):
+    fact=fact*i
+print("FACTORAIAL OF ",num,"IS",fact)
+
+
+#SUM OF SERIES
+N=int(input("ENTER THE NUMBER :"))
+s=0.0
+for i in range(1,N+1):
+    a=float(i**i)/i
+    s=s+a
+print("THE SUM OF THE SERIES IS ",s)
+
+#odd or even
+def oddeven(a):
+    if(a%2==0):
+        return 1
+    else:
+        return 0
+num=int(input("ENTER THE NUMBER :"))
+if (oddeven(num)==1):
+    print("THE GIVEN NUMBER IS EVEN ")
+elif (oddeven(num)==0):
+    print("THE GIVEN NUMBER IS ODD")
+
+# REVERSE THE STRING
+def rev(str1):
+    str2=''
+    i=len(str1)
+    while i>=0:
+        str+2=str1[i]
+        i-=1
+    return str2
+word=input("\n ENTER THE STRING :")
+print("\n THE MIRROR IMAGE OF THE GIVEN STRING IS :",rev(word))
+""
+
+# GENERATE THE VALUES AND REMOVE THE ODD NUMBERS
+num1=[]
+for i in range(1,10):
+    num1.append(i)
+print("NUMBERS FROM 1 TO 10 ....\n",num1)
+for j,i in enumerate(num1):
+    if (i%2==1):
+        del num1[j]
+print("THE VALUES AFTER REMOVED ODD NUMBERS ...\n ",num1)
+""
+# TO GENARATE THE  PRIME NUMBERS AND SET OPERATIONS
+ODD=set([x*2+1 for x in range(0,5)])
+primes=set()
+for i in range(2,10):
+    j=2
+    f=0
+    while (j<=i/2):
+        if (i%j==0):
+            f=1
+        j+=1
+    if (f==0):
+        primes.add(i)
+print("ODD NUMBERS :",ODD)
+print("PRIME NUMBERS :",primes)
+print("UNION :",ODD.union(primes))
+print("INTERSECTION : ",ODD.intersection(primes))
+print("DIFFERENCE :",ODD.difference(primes))
+print("SYMMETRIC DIFFERENCE :",ODD.symmetric_difference(primes))
+
+"""
+class string:
+    def __init__(self):
+        self.uppercase=0
+        self.lowercase=0
+        self.vowels=0
+        self.consonants=0
+        self.spaces=0
+        self.string=0
+    def getstr(self):
+        self.string=str(input("ENTER THE STRING :"))
+    def count_upper(self):
+        for ch in self.string:
+            if (ch.isupper()):
+                self.uppercase+=1
+    def count_lower(self):
+        for ch in self.string:
+            if (ch.islower()):
+                self.lowercase+=1
+    def count_vowels(self):
+        for ch in self.string:
+            if (ch in 'A','a','e','E','i','I','o','O','u','U'):
+                self.vowels+=1
+    def count_consonants(self):
+        for ch in self.string:
+            if (ch not in('A','a','e','E','i','I','o','O','u','U')):
+                self.consonants+=1
+    def count_space(self):
+        for ch in self.string:
+            if (ch==""):
+                self.spaces+=1
+    def execute(self):
+        self.count_upper()
+        self.count_lower()
+        self.count_vowels()
+        self.count_consonants()
+        self.count_space()
+    def display(self):
+        print("THE GIVEN STRING CONTAINS ....")
+        print("%d UPPERCASE LETTERS "%self.uppercase)
+        print("%d LOWERCASE LETTERS "% self.lowercase)
+        print("%d VOWELS "%self.vowels)
+        print("%d CONSONANTS"%self.consonants)
+        print("%d SPACES "%self.spaces)
+S=string()
+S.getstr()
+S.execute()
+S.display()
