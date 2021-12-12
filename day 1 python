@@ -1,0 +1,49 @@
+import datetime as dt
+
+current_date=dt.date.today()
+print(current_date)
+print("-----------------------------------------------------")
+new=dt.date(2025,6,9)
+print(new)
+print("YEAR :",new.year)
+print("YEAR :",new.month)
+print("YEAR :",new.day)
+a=dt.time(10,45,5,45387)
+print(a)
+print("-----------------------------------------------------")
+time=dt.datetime.now()
+print(time)
+print("-----------------------------------------------------")
+#try catch exeption
+#try block
+try:
+    a=10/0
+except Exception as e:
+    print(e)
+    print("-----------------------------------------------------")
+# Exeption **
+
+print("# Exeption **")
+try:
+    a=10/0
+except:
+    print("there is nothing to display")
+print("-----------------------------------------------------")
+print("else part execution ")
+try:
+    a=10/2
+except Exception as e:
+    print(e)
+else:
+    print("the value is :",a)
+    print("-----------------------------------------------------")
+    print("finnally execution ")
+try:
+    a=10/2
+except Exception as e:
+    print(e)
+else:
+    print("the value is :",a)
+finally:
+    print("thank you ")
+print("-----------------------------------------------------")
