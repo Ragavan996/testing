@@ -1,0 +1,11 @@
+class car():
+    pass
+
+a=10
+print(type(a))
+print(type(car))
+bmw=car()
+
+print(isinstance(bmw,car))
+print(isinstance(a,int))
+print(type(bmw))
